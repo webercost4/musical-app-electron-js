@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>Musical app</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css" />
+
+    <script> let $ = require("jquery");</script>
+</head>
+
+<body>
+
+    <script>
+        // salvar Tempo de troca de acordes no localstorage
+        function setTimeChords() {
+            const setTimeChord = document.getElementById('setTimeChord').value;
+
+            if (!isNaN(setTimeChord) || setTimeChord > 1 || setTimeChord < 10000) {
+                localStorage.setItem('setTimeChord', setTimeChord);
+                window.location.href = "";
+            }
+        }
+
+        function removeTimeChords() {
+            document.getElementById('removeTimeChord').addEventListener('click', () => {
+                localStorage.removeItem('setTimeChord');
+                window.location.href = "";
+            });
+        }
+
+    </script>
+
+    <nav class="menu">
+        <ul id="navs"></ul>
+    </nav>
+
+    <section class="d-flex p-3 justify-content-center" id="style-4">
+        <input type="text" placeholder="Adicionar Tempo" id="setTimeChord" class="form-input mr-1 col-md-3">
+        <button type="submit" onclick="setTimeChords()" class="btn">Adicionar Timer</button>
+        <button type="button" onclick="removeTimeChords()" id="removeTimeChord" class="btn ml-1">Remover
+            Timer</button>
+    </section>
+
+    <div class="mx-auto d-flex text-center scrollbar" id="chords"></div>
+
+
+    <section>
+        <h1 id="error" class="text-white text-center"></h1>
+    </section>
+
+
+    <script src="./app/index.js"></script>
+
+</body>
+
+</html>

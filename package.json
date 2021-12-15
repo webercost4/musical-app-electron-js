@@ -1,0 +1,17 @@
+{
+    "name": "chords-for-guitar-app",
+    "version": "1.0.0",
+    "description": "This is a project for chords for guitar",
+    "scripts": {
+        "start": "electron ."
+    },
+    "main": "main.js",
+    "author": "Weber Costa",
+    "license": "MIT",
+    "dependencies": {
+        "jquery": "^3.6.0"
+    },
+    "devDependencies": {
+        "electron": "^16.0.4"
+    }
+}
