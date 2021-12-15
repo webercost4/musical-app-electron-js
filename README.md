@@ -10,5 +10,5 @@
 ##
 
 <h1>Prints da tela (imagens de exemplo)</h1>
-<img src="./public/print-screen/print-1" />
-<img src="./public/print-screen/print-2" />
+<img src="./public/print-screen/print-1.png" />
+<img src="./public/print-screen/print-2.png" />
